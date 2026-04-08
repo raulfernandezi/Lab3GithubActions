@@ -51,7 +51,7 @@ public class HolaControllerTest {
     public void holaUser() throws Exception {
 	mockMvc.perform(get("/hola?nombre=EMSAlumno"))
 	.andExpect(status().isOk())
-	.andExpect(view().name("hola"))
+	.andExpect(view().name("adios"))
 	.andExpect(model().attributeExists("nombre"))
 	.andExpect(model().attribute("nombre", is("EMSAlumno")))
 	.andExpect(content().string(containsString("¡Hola EMSAlumno!")))
